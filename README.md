@@ -119,6 +119,3 @@ This server operates in the following manner:
    utility from imagemagick;
 3. it forwards the resized image to the user;
 4. it loads the resized image to S3 for later usage.
-
-comit
-
