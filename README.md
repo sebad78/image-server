@@ -76,10 +76,17 @@ heroku config:set AWS_SECRET=YOUR_AWS_SECRET_HERE
 heroku config:set S3_BUCKET=YOUR_BUCKET_HERE
 ```
 
+And:
+
+heroku buildpacks:add --index 1 https://github.com/mcollina/heroku-buildpack-graphicsmagick.git
+
+
 ## Usage
 
 Once started, resizing image is really easy, it's just needed to
 call a specific URL.
+
+
 
 ### Contain
 
@@ -89,6 +96,8 @@ Creates an image whose sizes are at max the ones specified.
 curl http://<YOUR_URL>/w<WIDTH>/h<HEIGHT>/for/<PATH_ON_S3_OF_THE_IMAGE>
 curl http://<YOUR_URL>/w<WIDTH>/for/<PATH_ON_S3_OF_THE_IMAGE>
 ```
+
+PATH_ON_S3_OF_THE_IMAGE ie https://s3.amazonaws.com/<Bucket>/<Image>
 
 ### Cover
 
